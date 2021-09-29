@@ -1,0 +1,164 @@
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  background: hsl(204, 43%, 93%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  max-width: 680px;
+  margin: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service-features,
+.service-price,
+.service-questions {
+  padding: 40px;
+}
+
+.service-features {
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  grid-column: 1 / -1;
+}
+
+.service-features h1 {
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+}
+
+.service-features span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+}
+
+.service-features p {
+  max-width: 90%;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: hsl(218, 22%, 67%);
+}
+
+.service-price {
+  background: hsl(179, 62%, 43%);
+  border-radius: 0 0 0 8px;
+}
+
+.service-price h2,
+.service-questions h2 {
+  margin-bottom: 20px;
+  font-size: 1.125em;
+  color: hsl(204, 43%, 93%);
+}
+
+.price-wrapper {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-price span:first-child {
+  font-size: 2em;
+  font-weight: 700;
+  color: hsl(204, 43%, 93%);
+}
+
+.service-price span:nth-child(2) {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.5;
+}
+
+.service-price p {
+  margin-bottom: 35px;
+  color: hsl(204, 43%, 93%);
+}
+
+.call-to-action {
+  max-width: 94%;
+  display: block;
+  padding: 15px 0;
+  font-size: 1em;
+  font-weight: 700;
+  color: hsl(204, 43%, 93%);
+  text-align: center;
+  border-radius: 4px;
+  background: hsl(71, 73%, 54%);
+  box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-out;
+}
+
+.call-to-action:hover {
+  background: hsl(71, 73%, 44%);
+}
+
+.service-questions {
+  background: hsl(179, 45%, 52%);
+  border-radius: 0 0 8px 0;
+}
+
+.service-questions li {
+  font-size: 0.9em;
+  color: hsl(204, 43%, 93%);
+  opacity: 0.7;
+}
+
+.service-questions li + li {
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-content {
+    max-width: 400px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    grid-template-columns: 1fr;
+  }
+
+  .service-features,
+  .service-price,
+  .service-questions {
+    padding: 30px;
+  }
+
+  .service-features p {
+    max-width: 92%;
+  }
+
+  .service-price {
+    border-radius: 0;
+  }
+
+  .service-questions {
+    border-radius: 0 0 8px 8px;
+  }
+}
